@@ -1,6 +1,6 @@
 # UIN23 Eksamen - Gruppe 12
 ## Eksamensdokument
-Se filen eksamensdokument_gruppe12.md for eksamensdokumentet.
+Se filen [eksamensdokument_gruppe12.pdf](eksamensdokument_gruppe12.pdf) for eksamensdokumentet.
 
 ## Installasjon og oppsett
 Det er kun React-applikasjonen som trenger å startes for å se det fungerende resultatet.
