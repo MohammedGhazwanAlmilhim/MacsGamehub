@@ -11,8 +11,8 @@ const SigninForm = ({ handleSubmit, handleChange, formData }) => {
         onChange={handleChange}
       />
 
-      <p style={{ fontSize: '0.9rem', color: '#555', marginTop: '4px' }}>
-        Du kan logge inn med testbruker: <strong>test@gamehub.com</strong>
+      <p style={{ fontSize: '0.9rem', color: '#555', marginTop: '8px' }}>
+        You can sign in using the test user: <strong>test@gamehub.com</strong>
       </p>
       <button id="signin" type="submit">Sign In</button>
     </form>
