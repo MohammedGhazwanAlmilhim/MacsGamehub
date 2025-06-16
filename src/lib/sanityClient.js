@@ -1,10 +1,10 @@
-import { createClient } from '@sanity/client';
+import { createClient } from "@sanity/client";
 
 const sanityClient = createClient({
-  projectId: 'kkvckrni',
-  dataset: 'production',
-  apiVersion: '2023-05-18',
-  token: 'sk63aSxuVWZA65ttTljpVlfE0EMBHmgVgGuEDGbBoUB2JxAYDJwjde6haPEdxXAFjnky4rS3WkujXK30Y3KLHQ0gwW8AbR2AVm50efhbxy5edJEYHaizOkLovrUU4O7VIIYMYmKXmVpie0BvxvUXari7qq0y94wT9nEajgwgjKif5TQVB3a6',
+  projectId: process.env.REACT_APP_SANITY_PROJECT_ID,
+  dataset: process.env.REACT_APP_SANITY_DATASET,
+  apiVersion: process.env.REACT_APP_SANITY_API_VERSION,
+  token: process.env.REACT_APP_SANITY_TOKEN,
   useCdn: false,
   ignoreBrowserTokenWarning: true,
 });

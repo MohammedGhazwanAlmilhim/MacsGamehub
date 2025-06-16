@@ -1,22 +1,23 @@
-import {defineConfig, isDev} from 'sanity'
-import {visionTool} from '@sanity/vision'
-import {deskTool} from 'sanity/desk'
-import {schemaTypes} from './schemas'
-import {getStartedPlugin} from './plugins/sanity-plugin-tutorial'
+import { defineConfig, isDev } from 'sanity'
+import { visionTool } from '@sanity/vision'
+import { deskTool } from 'sanity/desk'
+import { schemaTypes } from './schemas'
+import { getStartedPlugin } from './plugins/sanity-plugin-tutorial'
 
-const devOnlyPlugins = [getStartedPlugin()]
+// Hent verdiene fra .env
+const projectId = process.env.SANITY_STUDIO_PROJECT_ID
+const dataset = process.env.SANITY_STUDIO_DATASET
 
 export default defineConfig({
   name: 'default',
   title: 'sanity',
 
-  projectId: 'kkvckrni',
-  dataset: 'production',
+  projectId,
+  dataset,
 
-  plugins: [deskTool(), visionTool(), ...(isDev ? devOnlyPlugins : [])],
+  plugins: [deskTool(), visionTool(), ...(isDev ? [getStartedPlugin()] : [])],
 
   schema: {
     types: schemaTypes,
   },
 })
-
