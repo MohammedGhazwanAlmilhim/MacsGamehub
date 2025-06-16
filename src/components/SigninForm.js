@@ -10,6 +10,10 @@ const SigninForm = ({ handleSubmit, handleChange, formData }) => {
         value={formData.email}
         onChange={handleChange}
       />
+
+      <p style={{ fontSize: '0.9rem', color: '#555', marginTop: '4px' }}>
+        Du kan logge inn med testbruker: <strong>test@gamehub.com</strong>
+      </p>
       <button id="signin" type="submit">Sign In</button>
     </form>
   );
